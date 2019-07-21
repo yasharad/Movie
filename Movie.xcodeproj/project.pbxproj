@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F1CCFA5722E48C31000EC503 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFA5622E48C31000EC503 /* AppDelegate.swift */; };
-		F1CCFA5922E48C31000EC503 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFA5822E48C31000EC503 /* ViewController.swift */; };
 		F1CCFA5C22E48C31000EC503 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1CCFA5A22E48C31000EC503 /* Main.storyboard */; };
 		F1CCFA5E22E48C33000EC503 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1CCFA5D22E48C33000EC503 /* Assets.xcassets */; };
 		F1CCFA6122E48C33000EC503 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1CCFA5F22E48C33000EC503 /* LaunchScreen.storyboard */; };
@@ -26,6 +25,7 @@
 		F1CCFA9222E48D52000EC503 /* TechnicianErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFA8722E48D52000EC503 /* TechnicianErrors.swift */; };
 		F1CCFA9522E4A35E000EC503 /* BackendError.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFA9422E4A35E000EC503 /* BackendError.swift */; };
 		F1CCFA9822E4A65B000EC503 /* MovieKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFA9722E4A65B000EC503 /* MovieKey.swift */; };
+		F1CCFA9B22E4A78C000EC503 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFA9A22E4A78C000EC503 /* HomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,6 @@
 /* Begin PBXFileReference section */
 		F1CCFA5322E48C31000EC503 /* Movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1CCFA5622E48C31000EC503 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F1CCFA5822E48C31000EC503 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F1CCFA5B22E48C31000EC503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1CCFA5D22E48C33000EC503 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1CCFA6022E48C33000EC503 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,6 +61,7 @@
 		F1CCFA8722E48D52000EC503 /* TechnicianErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TechnicianErrors.swift; sourceTree = "<group>"; };
 		F1CCFA9422E4A35E000EC503 /* BackendError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackendError.swift; sourceTree = "<group>"; };
 		F1CCFA9722E4A65B000EC503 /* MovieKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieKey.swift; sourceTree = "<group>"; };
+		F1CCFA9A22E4A78C000EC503 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,10 +103,10 @@
 		F1CCFA5522E48C31000EC503 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				F1CCFA9922E4A765000EC503 /* Controller */,
 				F1CCFA9622E4A5E6000EC503 /* Network Layer */,
 				F1CCFA9322E4A344000EC503 /* Model */,
 				F1CCFA5622E48C31000EC503 /* AppDelegate.swift */,
-				F1CCFA5822E48C31000EC503 /* ViewController.swift */,
 				F1CCFA5A22E48C31000EC503 /* Main.storyboard */,
 				F1CCFA5D22E48C33000EC503 /* Assets.xcassets */,
 				F1CCFA5F22E48C33000EC503 /* LaunchScreen.storyboard */,
@@ -205,6 +205,14 @@
 				F1CCFA7B22E48D52000EC503 /* Network Manager */,
 			);
 			path = "Network Layer";
+			sourceTree = "<group>";
+		};
+		F1CCFA9922E4A765000EC503 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F1CCFA9A22E4A78C000EC503 /* HomeViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -313,13 +321,13 @@
 				F1CCFA8A22E48D52000EC503 /* JSONParameterEncoder.swift in Sources */,
 				F1CCFA9522E4A35E000EC503 /* BackendError.swift in Sources */,
 				F1CCFA8922E48D52000EC503 /* URLParameterEncoder.swift in Sources */,
+				F1CCFA9B22E4A78C000EC503 /* HomeViewController.swift in Sources */,
 				F1CCFA8E22E48D52000EC503 /* EndpointType.swift in Sources */,
 				F1CCFA8822E48D52000EC503 /* ParameterEncoding.swift in Sources */,
 				F1CCFA8C22E48D52000EC503 /* NetworkManager.swift in Sources */,
 				F1CCFA9122E48D52000EC503 /* HandleResponse.swift in Sources */,
 				F1CCFA8D22E48D52000EC503 /* HTTPMethod.swift in Sources */,
 				F1CCFA8F22E48D52000EC503 /* HTTPTask.swift in Sources */,
-				F1CCFA5922E48C31000EC503 /* ViewController.swift in Sources */,
 				F1CCFA9822E4A65B000EC503 /* MovieKey.swift in Sources */,
 				F1CCFA8B22E48D52000EC503 /* NetworkEnvironment.swift in Sources */,
 				F1CCFA5722E48C31000EC503 /* AppDelegate.swift in Sources */,
