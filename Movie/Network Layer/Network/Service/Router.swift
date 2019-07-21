@@ -9,7 +9,7 @@
 import Foundation
 
 
-public typealias NetworkRouterCompletion = (_ data: Data?,_ response: URLResponse?,_ error: Error?)->()
+public typealias NetworkRouterCompletion = (_ data: Data?,_ error: Error?)->()
 protocol NetworkRouter {
     associatedtype EndPoint: EndPointType
     func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion)
@@ -25,10 +25,24 @@ public class Router<EndPoint: EndPointType>: NetworkRouter {
         do {
             let request = try self.buildRequest(from: route)
             task = session.dataTask(with: request, completionHandler: { data, response, error in
-                completion(data, response, error)
+                
+                if let response = response as? HTTPURLResponse {
+                    switch response.result {
+                    case .success:
+                        completion(data, nil)
+                    case .failure( _):
+                        //                        if var error = error {
+                        //                            error.statusCode = erorrCode
+                        //                            completion(nil, error)
+                        //                        }
+                        completion(nil, error)
+                    }
+                }
+                
+                
             })
         }catch {
-            completion(nil, nil, error)
+            completion(nil, error)
         }
         self.task?.resume()
     }
@@ -97,3 +111,40 @@ public class Router<EndPoint: EndPointType>: NetworkRouter {
     }
     
 }
+extension URLRequest {
+    private static var _multiPartParams = [String: Parameters]()
+    private static var _media = [String: Data?]()
+    
+    var multiPartParams: Parameters? {
+        get {
+            let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
+            return URLRequest._multiPartParams[tmpAddress] ?? nil
+        }
+        set(newValue) {
+            let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
+            URLRequest._multiPartParams[tmpAddress] = newValue
+        }
+    }
+    var media: Data? {
+        get {
+            let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
+            return URLRequest._media[tmpAddress] ?? nil
+        }
+        set(newValue) {
+            let tmpAddress = String(format: "%p", unsafeBitCast(self, to: Int.self))
+            URLRequest._media[tmpAddress] = newValue
+        }
+    }
+}
+//extension Error {
+//    var statusCode: Int {
+//        get {
+//            return self.statusCode
+//        }
+//        set (value){
+//            self.statusCode = value
+//        }
+//    }
+//}
+
+

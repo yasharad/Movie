@@ -27,6 +27,7 @@
 		F1CCFA9822E4A65B000EC503 /* MovieKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFA9722E4A65B000EC503 /* MovieKey.swift */; };
 		F1CCFA9B22E4A78C000EC503 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFA9A22E4A78C000EC503 /* HomeViewController.swift */; };
 		F1CCFA9E22E4A875000EC503 /* MovieEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFA9D22E4A875000EC503 /* MovieEndPoint.swift */; };
+		F1CCFAA122E4AB47000EC503 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFAA022E4AB47000EC503 /* MovieService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		F1CCFA9722E4A65B000EC503 /* MovieKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieKey.swift; sourceTree = "<group>"; };
 		F1CCFA9A22E4A78C000EC503 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F1CCFA9D22E4A875000EC503 /* MovieEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEndPoint.swift; sourceTree = "<group>"; };
+		F1CCFAA022E4AB47000EC503 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		F1CCFA5522E48C31000EC503 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				F1CCFA9F22E4AB30000EC503 /* Service */,
 				F1CCFA9C22E4A84A000EC503 /* EndPoint */,
 				F1CCFA9922E4A765000EC503 /* Controller */,
 				F1CCFA9622E4A5E6000EC503 /* Network Layer */,
@@ -226,6 +229,14 @@
 			path = EndPoint;
 			sourceTree = "<group>";
 		};
+		F1CCFA9F22E4AB30000EC503 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				F1CCFAA022E4AB47000EC503 /* MovieService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -339,6 +350,7 @@
 				F1CCFA9122E48D52000EC503 /* HandleResponse.swift in Sources */,
 				F1CCFA8D22E48D52000EC503 /* HTTPMethod.swift in Sources */,
 				F1CCFA8F22E48D52000EC503 /* HTTPTask.swift in Sources */,
+				F1CCFAA122E4AB47000EC503 /* MovieService.swift in Sources */,
 				F1CCFA9822E4A65B000EC503 /* MovieKey.swift in Sources */,
 				F1CCFA8B22E48D52000EC503 /* NetworkEnvironment.swift in Sources */,
 				F1CCFA5722E48C31000EC503 /* AppDelegate.swift in Sources */,
