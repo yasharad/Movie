@@ -1,6 +1,6 @@
 //
 //  Router.swift
-//  CafeComic
+//  Movie
 //
 //  Created by Yashar on 6/17/19.
 //  Copyright © 2019 Yashar Azabdaftari. All rights reserved.
@@ -20,7 +20,6 @@ public class Router<EndPoint: EndPointType>: NetworkRouter {
     
     private var task: URLSessionTask?
     private let session = URLSession(configuration: .default)
-    //URLSession.shared
     func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
         
         do {

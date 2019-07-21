@@ -1,6 +1,6 @@
 //
 //  HTTPMethod.swift
-//  CafeComic
+//  Movie
 //
 //  Created by Yashar on 6/17/19.
 //  Copyright © 2019 Yashar Azabdaftari. All rights reserved.

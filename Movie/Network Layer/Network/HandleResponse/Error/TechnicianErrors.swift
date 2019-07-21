@@ -1,6 +1,6 @@
 //
 //  TechnicianErrors.swift
-//  CafeComic
+//  Movie
 //
 //  Created by Yashar on 6/19/19.
 //  Copyright © 2019 Yashar Azabdaftari. All rights reserved.
@@ -68,7 +68,7 @@ extension TechnicianErrors {
         if let errorData = errorData {
             func parseErrorMessages(_ errorData: Data) -> String? {
             
-               // return try? JSONDecoder().decode(BackendError.self, from: errorData).message
+                return try? JSONDecoder().decode(BackendError.self, from: errorData).message
             }
             switch statusCode {
             case 400:
