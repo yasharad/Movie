@@ -12,10 +12,14 @@ struct NetworkManager {
     private static let environment: NetworkEnvironment = .production
     static var environmentBaseURL: String {
         switch NetworkManager.environment {
-        case .qa:         return "https://gateway.marvel.com/v1/public"
-        case .staging:    return "https://gateway.marvel.com/v1/public"
-        case .production: return "https://gateway.marvel.com/v1/public"
+        case .qa:         return "http://api.themoviedb.org/3/search/movie"
+        case .staging:    return "http://api.themoviedb.org/3/search/movie"
+        case .production: return "http://api.themoviedb.org/3/search/movie"
         }
     }
     
 }
+
+
+
+//static let imageUrl = "http://image.tmdb.org/t/p/"
