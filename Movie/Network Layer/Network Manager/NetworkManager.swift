@@ -18,6 +18,14 @@ struct NetworkManager {
         }
     }
     
+    static var environmentImageURL: String {
+        switch NetworkManager.environment {
+        case .qa:         return "http://image.tmdb.org/t/p/"
+        case .staging:    return "http://image.tmdb.org/t/p/"
+        case .production: return "http://image.tmdb.org/t/p/"
+        }
+    }
+    
 }
 
 

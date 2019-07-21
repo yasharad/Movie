@@ -26,7 +26,7 @@ extension MovieEndPoint: EndPointType {
     var path: String {
         switch self {
         case .getMoiviesByQuery(_):
-            return "/query"
+            return ""
         
         }
     }

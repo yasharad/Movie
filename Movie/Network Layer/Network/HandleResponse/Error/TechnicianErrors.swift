@@ -61,42 +61,44 @@ enum TechnicianErrors: Error {
 // ======================
 // MARK: - Error Handling
 // ======================
-extension TechnicianErrors {
-    
-    static func handle(_ errorData: Data?, statusCode: Int) -> String {
-        
-        if let errorData = errorData {
-            func parseErrorMessages(_ errorData: Data) -> String? {
-            
-                return try? JSONDecoder().decode(BackendError.self, from: errorData).message
-            }
-            switch statusCode {
-            case 400:
-                return TechnicianErrors.other(messages: parseErrorMessages(errorData)).errorDescription!
-            case 401:
-                return TechnicianErrors.unAuthorized(messages: parseErrorMessages(errorData)).errorDescription!
-            case 403:
-                return TechnicianErrors.forbidden(messages: parseErrorMessages(errorData)).errorDescription!
-            case 404:
-                return TechnicianErrors.notFound(messages: parseErrorMessages(errorData)).errorDescription!
-            case 405:
-                return TechnicianErrors.methodNotAllowed(messages: parseErrorMessages(errorData)).errorDescription!
-            case 409:
-                return TechnicianErrors.missing(messages: parseErrorMessages(errorData)).errorDescription!
-            case 504:
-                return TechnicianErrors.connectionTimeout.errorDescription!
-            case 400..<500:
-                return TechnicianErrors.other(messages: parseErrorMessages(errorData)).errorDescription!
-            case 501...599:
-                return TechnicianErrors.badRequest.errorDescription!
-            case 600:
-                return TechnicianErrors.failed.errorDescription!
-            default:
-                return TechnicianErrors.other(messages: parseErrorMessages(errorData)).errorDescription!
-            }
-            
-        } else {
-            return TechnicianErrors.rechability.errorDescription!
-        }
-    }
-}
+//extension TechnicianErrors {
+//    
+//    static func handle(_ errorData: Error?, statusCode: Int) -> String {
+//        
+//        if let errorData = errorData {
+//            func parseErrorMessages(_ errorData: Data) -> String? {
+//                
+//                return try? JSONDecoder().decode(BackendError.self, from: errorData).message
+//            }
+//        
+//            //           switch statusCode {
+//            //            case 400:
+//            //                return TechnicianErrors.other(messages: parseErrorMessages(errorData)).errorDescription!
+//            //            case 401:
+//            //                return TechnicianErrors.unAuthorized(messages: parseErrorMessages(errorData)).errorDescription!
+//            //            case 403:
+//            //                return TechnicianErrors.forbidden(messages: parseErrorMessages(errorData)).errorDescription!
+//            //            case 404:
+//            //                return TechnicianErrors.notFound(messages: parseErrorMessages(errorData)).errorDescription!
+//            //            case 405:
+//            //                return TechnicianErrors.methodNotAllowed(messages: parseErrorMessages(errorData)).errorDescription!
+//            //            case 409:
+//            //                return TechnicianErrors.missing(messages: parseErrorMessages(errorData)).errorDescription!
+//            //            case 504:
+//            //                return TechnicianErrors.connectionTimeout.errorDescription!
+//            //            case 400..<500:
+//            //                return TechnicianErrors.other(messages: parseErrorMessages(errorData)).errorDescription!
+//            //            case 501...599:
+//            //                return TechnicianErrors.badRequest.errorDescription!
+//            //            case 600:
+//            //                return TechnicianErrors.failed.errorDescription!
+//            //            default:
+//            //                return TechnicianErrors.other(messages: parseErrorMessages(errorData)).errorDescription!
+//            //           }
+//            
+//    } else {
+//            return TechnicianErrors.rechability.errorDescription!
+//        }
+//       
+//    }
+//

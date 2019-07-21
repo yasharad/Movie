@@ -28,6 +28,12 @@
 		F1CCFA9B22E4A78C000EC503 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFA9A22E4A78C000EC503 /* HomeViewController.swift */; };
 		F1CCFA9E22E4A875000EC503 /* MovieEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFA9D22E4A875000EC503 /* MovieEndPoint.swift */; };
 		F1CCFAA122E4AB47000EC503 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFAA022E4AB47000EC503 /* MovieService.swift */; };
+		F1CCFAA322E4C5EB000EC503 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFAA222E4C5EB000EC503 /* MovieModel.swift */; };
+		F1CCFAA522E4C852000EC503 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1CCFAA422E4C852000EC503 /* HomeViewController.xib */; };
+		F1CCFAA822E4CAD6000EC503 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFAA722E4CAD6000EC503 /* MovieViewModel.swift */; };
+		F1CCFAAE22E4D1B5000EC503 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFAAC22E4D1B5000EC503 /* HomeTableViewCell.swift */; };
+		F1CCFAAF22E4D1B5000EC503 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F1CCFAAD22E4D1B5000EC503 /* HomeTableViewCell.xib */; };
+		F1CCFAB222E4D4A3000EC503 /* ImageViewExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1CCFAB122E4D4A3000EC503 /* ImageViewExtention.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +72,12 @@
 		F1CCFA9A22E4A78C000EC503 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		F1CCFA9D22E4A875000EC503 /* MovieEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEndPoint.swift; sourceTree = "<group>"; };
 		F1CCFAA022E4AB47000EC503 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		F1CCFAA222E4C5EB000EC503 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		F1CCFAA422E4C852000EC503 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		F1CCFAA722E4CAD6000EC503 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		F1CCFAAC22E4D1B5000EC503 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		F1CCFAAD22E4D1B5000EC503 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		F1CCFAB122E4D4A3000EC503 /* ImageViewExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewExtention.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +119,9 @@
 		F1CCFA5522E48C31000EC503 /* Movie */ = {
 			isa = PBXGroup;
 			children = (
+				F1CCFAB022E4D3ED000EC503 /* Extention */,
+				F1CCFAA922E4D182000EC503 /* View */,
+				F1CCFAA622E4CAC2000EC503 /* ViewModel */,
 				F1CCFA9F22E4AB30000EC503 /* Service */,
 				F1CCFA9C22E4A84A000EC503 /* EndPoint */,
 				F1CCFA9922E4A765000EC503 /* Controller */,
@@ -200,6 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				F1CCFA9422E4A35E000EC503 /* BackendError.swift */,
+				F1CCFAA222E4C5EB000EC503 /* MovieModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -217,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				F1CCFA9A22E4A78C000EC503 /* HomeViewController.swift */,
+				F1CCFAA422E4C852000EC503 /* HomeViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -235,6 +252,47 @@
 				F1CCFAA022E4AB47000EC503 /* MovieService.swift */,
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		F1CCFAA622E4CAC2000EC503 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F1CCFAA722E4CAD6000EC503 /* MovieViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F1CCFAA922E4D182000EC503 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1CCFAAA22E4D189000EC503 /* TableCellView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F1CCFAAA22E4D189000EC503 /* TableCellView */ = {
+			isa = PBXGroup;
+			children = (
+				F1CCFAAB22E4D197000EC503 /* HomeTableCellView */,
+			);
+			path = TableCellView;
+			sourceTree = "<group>";
+		};
+		F1CCFAAB22E4D197000EC503 /* HomeTableCellView */ = {
+			isa = PBXGroup;
+			children = (
+				F1CCFAAC22E4D1B5000EC503 /* HomeTableViewCell.swift */,
+				F1CCFAAD22E4D1B5000EC503 /* HomeTableViewCell.xib */,
+			);
+			path = HomeTableCellView;
+			sourceTree = "<group>";
+		};
+		F1CCFAB022E4D3ED000EC503 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				F1CCFAB122E4D4A3000EC503 /* ImageViewExtention.swift */,
+			);
+			path = Extention;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -321,6 +379,8 @@
 				F1CCFA6122E48C33000EC503 /* LaunchScreen.storyboard in Resources */,
 				F1CCFA5E22E48C33000EC503 /* Assets.xcassets in Resources */,
 				F1CCFA5C22E48C31000EC503 /* Main.storyboard in Resources */,
+				F1CCFAAF22E4D1B5000EC503 /* HomeTableViewCell.xib in Resources */,
+				F1CCFAA522E4C852000EC503 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,12 +398,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1CCFAA322E4C5EB000EC503 /* MovieModel.swift in Sources */,
 				F1CCFA9222E48D52000EC503 /* TechnicianErrors.swift in Sources */,
 				F1CCFA9022E48D52000EC503 /* Router.swift in Sources */,
+				F1CCFAB222E4D4A3000EC503 /* ImageViewExtention.swift in Sources */,
 				F1CCFA8A22E48D52000EC503 /* JSONParameterEncoder.swift in Sources */,
 				F1CCFA9522E4A35E000EC503 /* BackendError.swift in Sources */,
 				F1CCFA8922E48D52000EC503 /* URLParameterEncoder.swift in Sources */,
+				F1CCFAAE22E4D1B5000EC503 /* HomeTableViewCell.swift in Sources */,
 				F1CCFA9B22E4A78C000EC503 /* HomeViewController.swift in Sources */,
+				F1CCFAA822E4CAD6000EC503 /* MovieViewModel.swift in Sources */,
 				F1CCFA8E22E48D52000EC503 /* EndpointType.swift in Sources */,
 				F1CCFA8822E48D52000EC503 /* ParameterEncoding.swift in Sources */,
 				F1CCFA8C22E48D52000EC503 /* NetworkManager.swift in Sources */,
