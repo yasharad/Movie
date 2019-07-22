@@ -6,7 +6,7 @@ In this app i have used [Themoviedb](https://www.themoviedb.org) Api
 ## Network Layer
 Network layer was built without any thirdparty libraray such as Alamofire ....
 But is very is easy to change it to any library you would like
-if you like to use Alamofire to can only repalce
+if you like to use Alamofire,  repalce
 ```
 func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
         
@@ -33,7 +33,7 @@ func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
         self.task?.resume()
     }
 ```
-to 
+with
 ```
     func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
         
