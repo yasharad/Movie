@@ -6,7 +6,7 @@ In this app i have used [Themoviedb](https://www.themoviedb.org) Api
 ## Network Layer
 Network layer was built without any thirdparty libraray such as Alamofire ....
 But it is very easy to change it to any library you would like
-if you like to use Alamofire,  repalce
+if you like to use Alamofire, in Router.swift file repalce
 ```
 func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
         
