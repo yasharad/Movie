@@ -90,8 +90,8 @@ struct NetworkManager {
 ```
 
 ## Podfile
-In project has only one podfile KINGFISHER to chache images for more information visit [KINGFISHER GitHub Pages](https://github.com/onevcat/Kingfisher)
-if you like to use another libarray you must change only ImageViewExtention.swift
+In this project has only one podfile KINGFISHER to chache images for more information visit [KINGFISHER GitHub Pages](https://github.com/onevcat/Kingfisher)
+if you like to use another libarray you must change only ImageViewExtention.swift file
 ```
 import Foundation
 import UIKit
