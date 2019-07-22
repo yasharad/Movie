@@ -89,3 +89,5 @@ struct NetworkManager {
 }
 ```
 
+##Podfile
+In project has only one podfile KINGFISHER to chache images for more information visit [KINGFISHER GitHub Pages](https://github.com/onevcat/Kingfisher)
