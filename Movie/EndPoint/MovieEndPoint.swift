@@ -22,12 +22,10 @@ extension MovieEndPoint: EndPointType {
         return url
     }
     
-    
     var path: String {
         switch self {
         case .getMoiviesByQuery(_):
             return ""
-        
         }
     }
     
@@ -40,10 +38,10 @@ extension MovieEndPoint: EndPointType {
     
     var task: HTTPTask {
         switch self {
-        case .getMoiviesByQuery(let query,let page):
+        case .getMoiviesByQuery(let query, let page):
             let params: Parameters =  ["query": query,
-                                        "page": page,
-                                        "api_key": MovieKey.apiKey]
+                                       "page": page,
+                                       "api_key": MovieKey.apiKey]
             return .requestParameters(bodyParameters: nil, parameterEncoding: .urlEncoding, urlParameters: params)
             
         }

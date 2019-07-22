@@ -8,12 +8,13 @@
 
 import Foundation
 import UIKit
-
+import Kingfisher
 extension UIImageView {
     func loadImageAsync(url: URL?){
         guard let _ = url else {
             return
         }
         
+        self.kf.setImage(with: url)
     }
 }

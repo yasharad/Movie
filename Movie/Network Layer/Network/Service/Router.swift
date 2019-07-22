@@ -9,7 +9,7 @@
 import Foundation
 
 
-public typealias NetworkRouterCompletion = (_ data: Data?,_ error: Error?)->()
+public typealias NetworkRouterCompletion = (_ data: Data?,_ error: BackendError?)->()
 protocol NetworkRouter {
     associatedtype EndPoint: EndPointType
     func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion)
@@ -26,23 +26,21 @@ public class Router<EndPoint: EndPointType>: NetworkRouter {
             let request = try self.buildRequest(from: route)
             task = session.dataTask(with: request, completionHandler: { data, response, error in
                 
+                if error != nil {
+                     completion(nil, BackendError(data: nil, error: error))
+                }
+                
                 if let response = response as? HTTPURLResponse {
                     switch response.result {
                     case .success:
                         completion(data, nil)
                     case .failure( _):
-                        //                        if var error = error {
-                        //                            error.statusCode = erorrCode
-                        //                            completion(nil, error)
-                        //                        }
-                        completion(nil, error)
+                        completion(nil, BackendError(data: data, error: error))
                     }
                 }
-                
-                
             })
         }catch {
-            completion(nil, error)
+            completion(nil, BackendError(data: nil, error: error))
         }
         self.task?.resume()
     }

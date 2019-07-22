@@ -36,3 +36,12 @@ class HomeTableViewCell: UITableViewCell {
     }
     
 }
+// ==================
+// MARK: ReusableView
+// ==================
+extension HomeTableViewCell: ReusableView {}
+
+// =====================
+// MARK: NibLoadableView
+// =====================
+extension HomeTableViewCell: NibLoadableView {}

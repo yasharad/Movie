@@ -22,7 +22,7 @@ extension MovieService: MovieServiceProtocol {
 
         provider.request(.getMoiviesByQuery(query: query, page: page)) { (data, error) in
             if error != nil {
-                completion(nil, error?.localizedDescription)
+                completion(nil, error?.serverError?.message)
             }
             guard let responseData = data else {
                 completion(nil, TechnicianErrors.noData.errorDescription)
@@ -42,6 +42,5 @@ extension MovieService: MovieServiceProtocol {
             
         }
     }
-    
     
 }
