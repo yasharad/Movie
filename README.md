@@ -5,7 +5,7 @@ In this app i have used [Themoviedb](https://www.themoviedb.org) Api
 
 ## Network Layer
 Network layer was built without any thirdparty libraray such as Alamofire ....
-But is very is easy to change it to any library you would like
+But it is very easy to change it to any library you would like
 if you like to use Alamofire,  repalce
 ```
 func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
@@ -65,3 +65,27 @@ with
        
     }
 ```
+In NetworkManager.swift file you can change your basic API Url
+```
+struct NetworkManager {
+    static  let shared = NetworkManager()
+    private static let environment: NetworkEnvironment = .production
+    static var environmentBaseURL: String {
+        switch NetworkManager.environment {
+        case .qa:         return "http://api.themoviedb.org/3/search/movie"
+        case .staging:    return "http://api.themoviedb.org/3/search/movie"
+        case .production: return "http://api.themoviedb.org/3/search/movie"
+        }
+    }
+    
+    static var environmentImageURL: String {
+        switch NetworkManager.environment {
+        case .qa:         return "http://image.tmdb.org/t/p/"
+        case .staging:    return "http://image.tmdb.org/t/p/"
+        case .production: return "http://image.tmdb.org/t/p/"
+        }
+    }
+    
+}
+```
+
