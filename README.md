@@ -4,7 +4,7 @@ A simple iOS App to show a list of movies by search (MVVM,Protocol Oriented,Test
 In this app i have used [Themoviedb](https://www.themoviedb.org) Api
 
 ## Network Layer
-Network layer was built without any thirdparty libraray such as Alamofire ....
+Network layer was built without any thirdparty library such as Alamofire ....
 But it is very easy to change it to any library you would like
 if you like to use Alamofire, in Router.swift file repalce
 ```
