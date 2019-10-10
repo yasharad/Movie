@@ -4,9 +4,9 @@ A simple iOS App to show a list of movies by search (MVVM,Protocol Oriented,Test
 In this app i have used [Themoviedb](https://www.themoviedb.org) Api
 
 ## Network Layer
-Network layer was built without any thirdparty library such as Alamofire ....
+Network layer has been built without any thirdparty library such as Alamofire ....
 But it is very easy to change it to any library you would like
-if you like to use Alamofire, in Router.swift file repalce
+if you like to use Alamofire, in Router.swift file you can repalce
 ```
 func request(_ route: EndPoint, completion: @escaping NetworkRouterCompletion) {
         
@@ -90,8 +90,8 @@ struct NetworkManager {
 ```
 
 ## Podfile
-This project has only one podfile KINGFISHER to chache images for more information visit [KINGFISHER GitHub Pages](https://github.com/onevcat/Kingfisher)
-if you like to use another library you must change only ImageViewExtention.swift file
+This project has only one podfile KINGFISHER to chache images. for more information visit [KINGFISHER GitHub Pages](https://github.com/onevcat/Kingfisher)
+if you like to use another library you must change just only ImageViewExtention.swift file
 ```
 import Foundation
 import UIKit
